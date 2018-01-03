@@ -1,0 +1,2 @@
+var producer = require('messaging/v3/producer');
+producer.queue("{{projectName}}/{{fileName}}").send("Message {{fileName}} sent at: " + new Date());
