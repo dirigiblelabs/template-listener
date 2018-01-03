@@ -1,2 +1,4 @@
 var producer = require('messaging/v3/producer');
-producer.queue("{{projectName}}/{{fileName}}").send("Message {{fileName}} sent at: " + new Date());
+var message = "[ I am a message created at: " + new Date() + " ]";
+producer.queue("{{projectName}}/{{fileName}}").send(message);
+console.log("Hello from the {{fileName}} Trigger! Message: " + message);
